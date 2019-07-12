@@ -1,0 +1,30 @@
+body{
+	background: #87CEEB;
+	font: 14px Courier;
+}
+
+h1{
+	font: 35pt Georgia;
+	text-align: center
+}
+
+#underline{
+	text-decoration: underline;
+}
+
+input[name=button]{
+	background: #D3D3D3;
+	color: #0000FF;
+	border-radius: 15px;
+	margin-left: 58px;
+	padding: 5px;	
+}
+
+#form{
+	background: #E0FFFF;
+	padding: 50px;
+	margin: 100px auto;
+	border: solid black 2px;
+	border-radius: 25px;
+	width: 169px;
+}

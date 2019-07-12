@@ -1,0 +1,252 @@
+body {
+    background: #87CEEB;
+}
+
+.label{
+    width: 460px;
+    padding: 30px;
+    font-size: 24px;
+}
+
+.label2{
+    float: right;
+}
+
+div.Title {
+    color: darkblue;
+}
+
+div.squares_container {
+    position:relative;
+    border:10px solid black;
+    height:300px;
+    width:500px;
+    padding:0;
+    z-index: 0;
+}
+
+#ball {
+    -webkit-animation-name: hide; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 3s; /* Safari 4.0 - 8.0 */
+    -webkit-animation-iteration-count: 1; /* Safari 4.0 - 8.0 */
+    animation-name: hide;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-delay: 2s;
+    opacity: 0;
+    left:0px;
+    top:20px;
+    z-index: 0;
+}
+
+
+div.squares_container:not(#ball) img {
+    position: absolute;
+    display: inline-block;
+}
+
+img:nth-child(1) {
+    -webkit-animation-name: sq1_shuffle; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+    -webkit-animation-iteration-count: 3; /* Safari 4.0 - 8.0 */
+    animation-name: sq1_shuffle;
+    animation-duration: 4s;
+    animation-iteration-count: 1;
+    animation-delay: 5s;
+    border-color:green;
+    top:0;
+    left:0;
+    z-index: 1;
+}
+img:nth-child(2) {
+    /* -webkit-animation-name: sq2_shuffle; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+    -webkit-animation-iteration-count: 3; /* Safari 4.0 - 8.0 */
+    animation-name: sq2_shuffle;
+    animation-duration: 4s;
+    animation-iteration-count: 1;
+    animation-delay: 5s;
+    border-color:red;
+    top:0;
+    right:0;
+    z-index: 1;
+}
+img:nth-child(3) {
+   /* -webkit-animation-name: sq3_shuffle; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+    -webkit-animation-iteration-count: 3; /* Safari 4.0 - 8.0 */
+    animation-name: sq3_shuffle;
+    animation-duration: 4s;
+    animation-iteration-count: 1;
+    animation-delay: 5s;
+    border-color:yellow;
+    bottom:0;
+    left:0;
+    z-index: 1;
+}
+img:nth-child(4) {
+    /* -webkit-animation-name: sq4_shuffle; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+    -webkit-animation-iteration-count: 3; /* Safari 4.0 - 8.0 */
+    animation-name: sq4_shuffle;
+    animation-duration: 4s;
+    animation-iteration-count: 1;
+    animation-delay: 5s;
+    border-color:pink;
+    bottom:0;
+    right:0;
+    z-index: 1;
+}
+
+
+/*------ ball shuffle --------*/
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes hide {
+    0%  {left:200px; top:20px;opacity: 100;}
+    25%  {left:200px; top:20px;opacity: 100;}
+    75%{left:0px; top:20px;opacity: 100;}
+    100%{left:0px; top:20px;opacity: 100;}
+}
+
+/* Standard syntax */
+@keyframes hide  {
+    0%  {left:200px; top:20px;opacity: 100;}
+    25%  {left:200px; top:20px;opacity: 100;}
+    75%{left:0px; top:20px;opacity: 100;}
+    100%{left:0px; top:20px;opacity: 100;}
+}
+
+/*------ square 1 shuffle --------*/
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes sq1_shuffle {
+    0%   {left:0px; top:0px;} /*upper-left*/
+    10%  {left:0px; top:200px;} /*bottom-left*/
+    20%  {left:400px; top:200px;} /*bottom-right*/
+    30%  {left:0px; top:200px;} /*bottom-left*/
+    40% {left:400px; top:200px;} /*bottom-right*/
+    50% {left:400px; top:0px;} /*upper-right*/
+    60% {left:0px; top:0px;} /*upper-left*/
+    70% {left:400px; top:0px;} /*upper-right*/
+    80% {left:400px; top:200px;} /*bottom-right*/
+    90% {left:400px; top:0px;} /*upper-right*/
+    100% {left:0px; top:0px;} /*upper-left*/
+}
+
+/* Standard syntax */
+@keyframes sq1_shuffle  {
+    0%   {left:0px; top:0px;} /*upper-left*/
+    10%  {left:0px; top:200px;} /*bottom-left*/
+    20%  {left:400px; top:200px;} /*bottom-right*/
+    30%  {left:0px; top:200px;} /*bottom-left*/
+    40% {left:400px; top:200px;} /*bottom-right*/
+    50% {left:400px; top:0px;} /*upper-right*/
+    60% {left:0px; top:0px;} /*upper-left*/
+    70% {left:400px; top:0px;} /*upper-right*/
+    80% {left:400px; top:200px;} /*bottom-right*/
+    90% {left:400px; top:0px;} /*upper-right*/
+    100% {left:0px; top:0px;} /*upper-left*/
+}
+
+
+
+/*------ square 2 shuffle --------*/
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes sq2_shuffle {
+    0%   {left:400px; top:0px;} /*upper-right*/
+    10%  {left:0px; top:0px;} /*upper-left*/
+    20%  {left:0px; top:200px;} /*bottom-left*/
+    30%  {left:0px; top:0px;} /*upper-left*/
+    40% {left:0px; top:200px;} /*bottom-left*/
+    50% {left:400px; top:200px;} /*bottom-right*/
+    60% {left:400px; top:0px;} /*upper-right*/
+    70% {left:400px; top:200px;} /*bottom-right*/
+    80% {left:400px; top:0px;} /*upper-right*/
+    90% {left:400px; top:0px;} /*upper-right*/
+    100% {left:400px; top:0px;} /*upper-right*/
+
+}
+/* Standard syntax */
+@keyframes sq2_shuffle  {
+    0%   {left:400px; top:0px;} /*upper-right*/
+    10%  {left:0px; top:0px;} /*upper-left*/
+    20%  {left:0px; top:200px;} /*bottom-left*/
+    30%  {left:0px; top:0px;} /*upper-left*/
+    40% {left:0px; top:200px;} /*bottom-left*/
+    50% {left:400px; top:200px;} /*bottom-right*/
+    60% {left:400px; top:0px;} /*upper-right*/
+    70% {left:400px; top:200px;} /*bottom-right*/
+    80% {left:400px; top:0px;} /*upper-right*/
+    90% {left:400px; top:0px;} /*upper-right*/
+    100% {left:400px; top:0px;} /*upper-right*/
+}
+
+
+
+/*------ square 3 shuffle --------*/
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes sq3_shuffle {
+    0%   {left:400px; top:200px;} /*bottom-right*/
+    10%  {left:0px; top:200px;} /*bottom-left*/
+    20%  {left:0px; top:0px;} /*upper-left*/
+    30%  {left:400px; top:0px;} /*upper-right*/
+    40% {left:0px; top:0px;} /*upper-left*/
+    50% {left:0px; top:200px;} /*bottom-left*/
+    60% {left:0px; top:200px;} /*bottom-left*/
+    70% {left:0px; top:0px;} /*upper-left*/
+    80% {left:400px; top:0px;} /*upper-right*/
+    90% {left:400px; top:200px;} /*bottom-right*/
+    100% {left:400px; top:200px;} /*bottom-right*/
+
+}
+/* Standard syntax */
+@keyframes sq3_shuffle  {
+    0%   {left:400px; top:200px;} /*bottom-right*/
+    10%  {left:0px; top:200px;} /*bottom-left*/
+    20%  {left:0px; top:0px;} /*upper-left*/
+    30%  {left:400px; top:0px;} /*upper-right*/
+    40% {left:0px; top:0px;} /*upper-left*/
+    50% {left:0px; top:200px;} /*bottom-left*/
+    60% {left:0px; top:200px;} /*bottom-left*/
+    70% {left:0px; top:0px;} /*upper-left*/
+    80% {left:400px; top:0px;} /*upper-right*/
+    90% {left:400px; top:200px;} /*bottom-right*/
+    100% {left:400px; top:200px;} /*bottom-right*/
+}
+
+
+
+/*------ square 4 shuffle --------*/
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes sq4_shuffle {
+    0%   {left:0px; top:200px;} /*bottom-left*/
+    10%  {left:400px; top:200px;} /*bottom-right*/
+    20%  {left:0px; top:200px;} /*bottom-left*/
+    30%  {left:0px; top:0px;} /*upper-left*/
+    40% {left:400px; top:0px;} /*upper-right*/
+    50% {left:400px; top:200px;} /*bottom-right*/
+    60% {left:0px; top:0px;} /*upper-left*/
+    70% {left:400px; top:0px;} /*upper-right*/
+    80% {left:400px; top:200px;} /*bottom-right*/
+    90% {left:0px; top:200px;} /*bottom-left*/
+    100% {left:0px; top:200px;} /*bottom-left*/
+
+}
+/* Standard syntax */
+@keyframes sq4_shuffle  {
+    0%   {left:0px; top:200px;} /*bottom-left*/
+    10%  {left:400px; top:200px;} /*bottom-right*/
+    20%  {left:0px; top:200px;} /*bottom-left*/
+    30%  {left:0px; top:0px;} /*upper-left*/
+    40% {left:400px; top:0px;} /*upper-right*/
+    50% {left:400px; top:200px;} /*bottom-right*/
+    60% {left:0px; top:0px;} /*upper-left*/
+    70% {left:400px; top:0px;} /*upper-right*/
+    80% {left:400px; top:200px;} /*bottom-right*/
+    90% {left:0px; top:200px;} /*bottom-left*/
+    100% {left:0px; top:200px;} /*bottom-left*/
+}

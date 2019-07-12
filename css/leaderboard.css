@@ -1,0 +1,38 @@
+h1{
+	font: 35pt Georgia;
+	text-align: center
+}
+
+.Title{
+	text-decoration: underline;
+}
+
+body{
+	background: #87CEEB;
+	font: 14px Courier;
+}
+
+.odd_row{
+	background-color: #00FA9A;
+    height: 40px;
+}
+
+.even_row{
+	background-color: #98FB98;
+    height: 40px;
+}
+
+tr, td, th {
+    padding: 12px;
+    margin: 20px auto;
+    border: 2px solid black;
+    margin-left: 40px;
+    
+}
+
+table{
+	margin-right: auto;
+    margin-left: auto;
+    margin: 20px auto;
+    width: 70px;
+}

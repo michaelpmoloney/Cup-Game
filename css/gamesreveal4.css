@@ -1,0 +1,119 @@
+body {
+    background: #87CEEB;
+}
+
+.label{
+    width: 460px;
+    padding: 30px;
+    font-size: 24px;
+}
+
+.label2{
+    float: right;
+}
+
+div.Title {
+    color: darkblue;
+}
+
+div.squares_container {
+    position:relative;
+    border:10px solid black;
+    height:300px;
+    width:500px;
+    padding:0;
+    z-index: 0;
+}
+
+#ball {
+    -webkit-animation-name: hide; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 3s; /* Safari 4.0 - 8.0 */
+    -webkit-animation-iteration-count: 1; /* Safari 4.0 - 8.0 */
+    animation-name: hide;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+    animation-delay: 0s;
+    opacity: 100;
+    left:300px;
+    top:230px;
+    z-index: 0;
+}
+
+
+div.squares_container:not(#ball) img {
+    position: absolute;
+    display: inline-block;
+}
+
+img:nth-child(1) {
+    -webkit-animation-name: sq1_shuffle; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+    -webkit-animation-iteration-count: 3; /* Safari 4.0 - 8.0 */
+    animation-name: sq1_shuffle;
+    animation-duration: 4s;
+    animation-iteration-count: 1;
+    animation-delay: 5s;
+    border-color:green;
+    top:0;
+    left:0;
+    z-index: 1;
+}
+img:nth-child(2) {
+    /* -webkit-animation-name: sq2_shuffle; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+    -webkit-animation-iteration-count: 3; /* Safari 4.0 - 8.0 */
+    animation-name: sq2_shuffle;
+    animation-duration: 4s;
+    animation-iteration-count: 1;
+    animation-delay: 5s;
+    border-color:red;
+    top:0;
+    right:0;
+    z-index: 1;
+}
+img:nth-child(3) {
+   /* -webkit-animation-name: sq3_shuffle; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+    -webkit-animation-iteration-count: 3; /* Safari 4.0 - 8.0 */
+    animation-name: sq3_shuffle;
+    animation-duration: 4s;
+    animation-iteration-count: 1;
+    animation-delay: 5s;
+    border-color:yellow;
+    bottom:0;
+    left:0;
+    z-index: 1;
+}
+img:nth-child(4) {
+    /* -webkit-animation-name: sq4_shuffle; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+    -webkit-animation-iteration-count: 3; /* Safari 4.0 - 8.0 */
+    animation-name: sq4_shuffle;
+    animation-duration: 4s;
+    animation-iteration-count: 1;
+    animation-delay: 5s;
+    border-color:pink;
+    bottom:0;
+    right:0;
+    z-index: 1;
+}
+
+
+/*------ ball Reveal --------*/
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes hide {
+    0%{left:450px; top:230px;opacity: 100;}
+    25%{left:450px; top:230px;opacity: 100;}
+    75%  {left:300px; top:230px;opacity: 100;}
+    100%  {left:300px; top:230px;opacity: 100;}
+}
+
+/* Standard syntax */
+@keyframes hide  {
+    0%{left:450px; top:230px;opacity: 100;}
+    25%{left:450px; top:230px;opacity: 100;}
+    75%  {left:300px; top:230px;opacity: 100;}
+    100%  {left:300px; top:230px;opacity: 100;}
+}
+
